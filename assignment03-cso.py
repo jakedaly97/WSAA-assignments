@@ -1,3 +1,6 @@
+# assignment03-cso.py
+# Author: Jake Daly
+
 import requests
 import json
 

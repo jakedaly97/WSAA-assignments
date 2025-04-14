@@ -1,51 +1,41 @@
 # assignment04-github.py
 # Author: Jake Daly
 
-import requests
-import json
+from github import Github
 from config import config as cfg
-import base64
 
-# GitHub API credentials
+# Authenticate with github using token
 api_key = cfg["key"]
+g = Github(api_key)
+
+# repository details
 owner = "jakedaly97"
-repo = "aprivateone"
-file_path = "andrew.txt"  
+repo_name = "aprivateone"
+file_path = "andrew.txt"
 commit_message = "Replace Andrew with Jake"
 
-# Headers for authentication
-headers = {
-    "Authorization": f"token {api_key}",
-    "Accept": "application/vnd.github.v3+json"
-}
+# Get the repository
+repo = g.get_user().get_repo(repo_name)
 
-# Step 1: Get file details
-file_url = f"https://api.github.com/repos/{owner}/{repo}/contents/{file_path}"
-response = requests.get(file_url, headers=headers)
+# Get file contents
+file = repo.get_contents(file_path)
 
-if response.status_code == 200:
-    file_data = response.json()
-    sha = file_data["sha"]  # Needed for updating the file
-    content = base64.b64decode(file_data["content"]).decode("utf-8")
+# Decode and modify the content
+content = file.decoded_content.decode("utf-8")
 
-    # Step 2: Modify the content
+if "Andrew" not in content:
+    print("No changes needed.")
+else:
     updated_content = content.replace("Andrew", "Jake")
 
-    # Step 3: Encode and send the updated content
-    updated_content_b64 = base64.b64encode(updated_content.encode("utf-8")).decode("utf-8")
+    # update file using pyGithub
+    repo.update_file(
+        path=file_path,
+        message=commit_message,
+        content=updated_content,
+        sha=file.sha
+    )
+    print("File updated successfully!")
 
-    update_data = {
-        "message": commit_message,
-        "content": updated_content_b64,
-        "sha": sha
-    }
-
-    update_response = requests.put(file_url, headers=headers, json=update_data)
-
-    if update_response.status_code == 200:
-        print("File updated successfully!")
-    else:
-        print("Failed to update file:", update_response.json())
-
-else:
-    print("Failed to fetch file:", response.json())
+# Read content of github file, https://python-forum.io/thread-26072.html
+# Update file using pygithub, https://stackoverflow.com/questions/40630829/how-to-update-a-file-using-pygithub

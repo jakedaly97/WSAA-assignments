@@ -39,3 +39,4 @@ else:
 
 # Read content of github file, https://python-forum.io/thread-26072.html
 # Update file using pygithub, https://stackoverflow.com/questions/40630829/how-to-update-a-file-using-pygithub
+# .replace, https://www.w3schools.com/python/ref_string_replace.asp

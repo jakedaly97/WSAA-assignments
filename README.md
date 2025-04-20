@@ -1,4 +1,4 @@
-# PFDA Assignments
+# WSAA Assignments
 
 This project is submitted for the **Web Services and Applications** module of the **Higher Diploma in Science in Computing in Data Analytics** course.
 

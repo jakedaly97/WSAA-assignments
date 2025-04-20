@@ -1,38 +1,33 @@
 # PFDA Assignments
 
-This project is submitted for the **Programming for Data Analytics** module of the **Higher Diploma in Science in Computing in Data Analytics** course.
+This project is submitted for the **Web Services and Applications** module of the **Higher Diploma in Science in Computing in Data Analytics** course.
 
 ---
 
 ## About This Project
 
-This project serves as a practical application of the theoretical knowledge acquired throughout the **Programming for Data Analytics** module. Building upon previously taught material from the **Programming and Scripting** module in semester one, the assignments required a deeper understanding of Python and its various libraries, such as `pandas` and `matplotlib`.
+This project serves as a practical application of the theoretical knowledge acquired throughout the **Web Services and Applications** module. The assignments in this module all focused on interacting with external APIs.
 
-Each task, written in Python, was designed to implement and explore a specific function of the Python language, often requiring research beyond the lecture material. This approach fostered independent thinking and problem-solving skills among the participants.
 
 ---
 
 ## Assignments Overview
 
-The project encompasses a total of **4 assignments**, detailed as follows:
+The repository contains a total of **3 assignments**, detailed as follows:
 
-### 1. **Assignment 2: Weather Data**  
-   - **File**: `assignment2-weather.ipynb`  
-   - **Description**: A Jupyter notebook containing a plot of temperature over time.
+### 1. **Assignment 2: Card Draw Simulation**  
+   - **File**: `assignment2-carddraw.py`  
+   - **Description**: A Python program that interacts with the Deck of Cards API to shuffle a new deck and draw 5 cards. The cards are displayed with their values and suits.
 
-### 2. **Assignment 3: Pie Chart**  
-   - **File**: `assignment03-pie.ipynb`  
-   - **Description**: A Jupyter notebook containing a pie chart of email domains. The data was obtained from a CSV file read into pandas.
+### 2. **Assignment 3: CSO Data Fetcher**  
+   - **File**: `assignment03-cso.py`  
+   - **Description**: A Python program that fetches data from the Central Statistics Office (CSO) API and saves the response as a JSON file for later use.
 
-### 3. **Assignment 5: Risk Simulation**  
-   - **File**: `assignment_5_risk.py`  
-   - **Description**: A Python program simulating 1000 individual battle rounds in Risk (3 attackers vs 2 defenders). The results were plotted as a bar chart.
+### 3. **Assignment 4: GitHub File Updater**  
+   - **File**: `assignment04-github.py`  
+   - **Description**: A Python program using the PyGithub library to authenticate via an API token, fetch a file from a private GitHub repository, and replace occurrences of "Andrew" with "Jake" in the file. The updated file is then committed back to the repository.
 
-### 4. **Assignment 6: Weather Data Analysis**  
-   - **File**: `assignment_6_Weather.ipynb`  
-   - **Description**: A Jupyter notebook analyzing weather data read into pandas.  
-     - The analysis includes calculating the mean temperature for each day.  
-     - The notebook contains a total of 7 plots.
+
 
 ---
 
@@ -42,26 +37,30 @@ The resources used to write the programs are cited within the code comments. Add
 
 ### List of Resources:
 
-1. [Matplotlib Time Series Line Plot](https://www.datacamp.com/tutorial/matplotlib-time-series-line-plot) - Tutorial on creating and customizing time series line plots in matplotlib.  
-2. [Extracting Domain from Email Address with Pandas](https://stackoverflow.com/questions/53044548/how-to-extract-domain-from-email-address-with-pandas) - Problem-solving guide.  
-3. [Plotting a Pie Chart in Matplotlib](https://www.codecademy.com/resources/docs/matplotlib/pyplot/pie) - Guide on creating pie charts.  
-4. [Python `range()` Function](https://www.w3schools.com/python/ref_func_range.asp) - Tutorial on using the `range()` function.  
-5. [Python Random Library Documentation](https://docs.python.org/3/library/random.html) - Reference for generating random numbers.  
-6. [Pandas `groupby()` Function](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html) - Guide to grouping data in pandas.  
-7. [Replacing Blank Values with NaN in Pandas](https://stackoverflow.com/questions/13445241/replacing-blank-values-white-space-with-nan-in-pandas) - Using `.replace()` to handle blank values.  
-8. [Converting Pandas Columns to `datetime`](https://saturncloud.io/blog/convert-pandas-column-to-datetime-a-guide/#:~:text=To%20convert%20a%20pandas%20column,new%20column%20with%20datetime%20values) - A guide on converting columns to `datetime`.  
-9. [Pandas `to_numeric()` Function](https://pandas.pydata.org/docs/reference/api/pandas.to_numeric.html) - Documentation for converting data types to numeric.  
-10. [Resampling Time Series Data in Pandas](https://www.earthdatascience.org/courses/use-data-open-source-python/use-time-series-data-in-python/date-time-types-in-pandas-python/resample-time-series-data-pandas-python/) - Lesson on using the `resample()` function in pandas.
+1. [Deck of cards API](https://deckofcardsapi.com/) - API used to shuffle and draw cards.  
+2. [Video going through API](https://www.youtube.com/watch?v=qF6zUptypGE) - Video explanation of how to use the Deck of Cards API.  
+3. [Python requests - GeeksforGeeks -](https://www.geeksforgeeks.org/response-json-python-requests/) - Guide for handling JSON responses using the requests library.  
+4. [CSO API Dataset FIQ02](https://ws.cso.ie/public/api.restful/PxStat.Data.Cube_API.ReadDataset/FIQ02/JSON-stat/2.0/en) - URL for the dataset used in the CSO API.  
+5. [Making a request with Python](https://requests.readthedocs.io/en/latest/user/quickstart/#make-a-request) - Documentation for sending HTTP requests using the requests library.  
+6. [Read content of GitHub file](https://python-forum.io/thread-26072.html) - Guide on reading content from a file in a GitHub repository using Python.  
+7. [Update file using PyGithub](https://stackoverflow.com/questions/40630829/how-to-update-a-file-using-pygithub) - StackOverflow discussion on how to update a file in a GitHub repository using PyGithub.  
+8. [Python .replace() method](https://www.w3schools.com/python/ref_string_replace.asp) - Explanation of the .replace() method in Python for modifying strings.  
 
 ---
 
 ## Use of This Project
 
-This project is an excellent practical learning resource for students exploring the fundamentals of computer programming. Covering key Python functionalities, it fosters independent thinking and problem-solving skills.
-
 By completing these assignments, users can:
-- Gain proficiency in Python.
-- Build confidence in solving real-world problems.
+
+- Gain proficiency in Python, particularly in areas such as working with APIs, data manipulation, and file handling.
+
+- Build confidence in solving real-world problems, including interacting with web services, processing datasets, and automating tasks.
+
+- Understand how to use external libraries like requests for API interactions and pyGithub for interacting with GitHub repositories.
+
+- Develop skills in debugging and troubleshooting issues related to web requests, data formatting, and API integration.
+
+- Learn how to effectively utilize documentation and resources to solve coding challenges.
 
 ---
 
@@ -70,8 +69,7 @@ By completing these assignments, users can:
 To get started with this project:
 
 1. Ensure you have an up-to-date version of Python installed on your system.  
-2. Download or clone the "PFDA" repository from GitHub.  
-3. Each program corresponds to a specific week's task. Users are encouraged to modify the scripts to further improve their functionality.
+2. Download or clone the "WSAA-assignments" repository from GitHub.  
 
 ---
 
